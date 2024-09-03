@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import resumepdf from '../mani assets/Mani_Java_Fresher.pdf'; // Corrected path
 
 function Header() {
     return (
@@ -9,7 +10,7 @@ function Header() {
             <nav className="navbar navbar-expand-lg">
                 <div className="container">
                     <a className="navbar-brand" href="#home">
-                        Mani Reddys's Portfolio
+                        Mani Reddy's Portfolio
                     </a>
                     <button
                         className="navbar-toggler"
@@ -37,7 +38,7 @@ function Header() {
                                 <a className="nav-link" href="#contact">Contact</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link download-link" href="/components/MainAssets/mani_java_fresher.pdf" download>
+                                <a className="nav-link download-link" href={resumepdf} download>
                                     <FontAwesomeIcon icon={faDownload} /> Download Resume
                                 </a>
                             </li>
