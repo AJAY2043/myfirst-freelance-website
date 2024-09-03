@@ -3,8 +3,8 @@ import React from 'react';
 import './Blog.css';
 import { FaRegNewspaper } from 'react-icons/fa';
 import { Card, Button } from 'react-bootstrap';
-import maniImg1 from '../mani assets/mani-img1.jpg';
-import maniImg2 from '../mani assets/mani-img2.jpg';
+import maniImg1 from '../mani assets/img3.jpg';
+import maniImg2 from '../mani assets/img4.jpg';
 
 function Blog() {
     const blogPosts = [
