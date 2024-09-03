@@ -1,0 +1,38 @@
+/* src/Components/Footer/Footer.css */
+.footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer h5 {
+    color: #f39c12;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer .text-md-end {
+        text-align: center;
+        margin-top: 20px;
+    }
+}

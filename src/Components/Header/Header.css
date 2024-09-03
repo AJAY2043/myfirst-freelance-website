@@ -1,0 +1,49 @@
+.header {
+    background: linear-gradient(90deg, #6A0572, #A603B7);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #FFD700;
+}
+
+.download-link {
+    color: #ffffff;
+    background-color: #5A20CB;
+    padding: 8px 12px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.download-link:hover {
+    background-color: #3A0088;
+    color: #FFD700;
+}
+
+.navbar-toggler-icon {
+    color: #ffffff;
+    background-image: none;
+}
+
+.navbar-toggler-icon::before {
+    content: '\f0c9'; /* FontAwesome bars icon */
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
