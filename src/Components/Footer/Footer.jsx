@@ -1,34 +1,85 @@
-// src/Components/Footer/Footer.js
 import React from 'react';
 import './Footer.css';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faLinkedinIn, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
+import runflat_logo from '../Assets/run-flat-logo.jpg'
 
-function Footer() {
-    return (
-        <footer className="footer">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-6">
-                        <h5>Contact Me</h5>
-                        <p>Email: manikantareddyallatipalli@gmail.com</p>
-                        <p>Phone: +91 9398336866</p>
-                    </div>
-                    <div className="col-md-6 text-md-end">
-                        <h5>Follow Me</h5>
-                        <div className="social-icons">
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                        </div>
-                    </div>
-                </div>
-                <div className="text-center mt-4">
-                    <p>&copy; {new Date().getFullYear()} All Rights Reserved. Designed by Your Name</p>
-                </div>
-            </div>
-        </footer>
-    );
-}
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        {/* Company Info */}
+        <div className="footer-section company-info">
+        <img src={runflat_logo} alt="" width='250'height='60'/>
+          
+          <h3>Runflat Tire Systems</h3>
+          
+          <p>Industry-leading specialist in custom RUNFLAT tires based out of Hyderabad, India.</p>
+          <p>Delivering safety and durability with every drive.</p>
+        </div>
+
+        {/* Quick Links */}
+        <div className="footer-section quick-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <Link to='/'><p><strong>Home</strong></p></Link>
+            <Link to='/company'><p><strong>About Us</strong></p></Link>
+            <Link to='/resources'><p><strong>Our Services</strong></p></Link>
+            <Link to='/contactus'><p><strong>Contact Us</strong></p></Link>
+          </ul>
+        </div>
+
+        {/* Services Links */}
+        <div className="footer-section services-links">
+          <h4>Our Services</h4>
+          <ul>
+             <Link to='/runflatsystems'><p><strong>RUNFLAT Systems</strong></p></Link>
+             <Link to='/militaryrunflatsystem'><p><strong>Military Runflat System</strong></p></Link>
+             <Link to='/beadlocksystem'><p><strong>Beadlock System</strong></p></Link>
+             <Link to='/heavydutywheels'><p><strong>Heavy Duty Wheels</strong></p></Link>
+             <Link to='/militarywheels'><p><strong>Military Wheels</strong></p></Link>
+          </ul>
+        </div>
+
+        {/* Social Media Icons */}
+        <div className="footer-section social-media">
+          <h4>Follow Us</h4>
+          <div className="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a href="https://www.linkedin.com/company/runflat-tire-systems/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="footer-bottom">
+        <p>&copy; 2024 Runflat Tire Systems . All rights reserved.</p>
+        <p>Privacy Policy | Terms & Conditions | Site Map</p>
+      </div>
+
+      {/* Scroll to Top Button */}
+      <div className="scroll-to-top" onClick={scrollToTop}>
+        <FontAwesomeIcon icon={faArrowUp} />
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;
+  

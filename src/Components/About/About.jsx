@@ -1,35 +1,80 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
-import maniHeroImg from '../mani assets/mani-heroimg.jpg';
+import { FaShieldAlt, FaCar, FaCogs, FaThumbsUp, FaUsers } from 'react-icons/fa';
+import vivek_sign from '../Assets/vivek-sign.jpg';
 
-function About() {
-    return (
-        <section id="about" className="about-section">
-            <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-lg-6">
-                        <img src={maniHeroImg} alt="Manikanta Reddy" className="about-image" />
-                    </div>
-                    <div className="col-lg-6">
-                        <div className="about-content">
-                            <h2 className="about-title">About Me</h2>
-                            <p className="about-text">
-                                Hello! I’m Allatipalli Venkata Manikanta Reddy, a passionate fresher with a strong background in Java and web development.
-                                I graduated with a B.Tech in Electronics and Communication Engineering from Tirumala Engineering College in 2022. 
-                                I’m dedicated to using my skills to contribute to innovative projects that make a difference.
-                            </p>
-                            <p className="about-text">
-                                My expertise includes Core Java, HTML, CSS, JavaScript, and MySQL. I have completed projects that involve speech emotion recognition using machine learning and a mobile phone detector.
-                            </p>
-                            <p className="about-text">
-                                I’m looking forward to applying my knowledge in a professional setting, where I can grow and help the organization succeed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+const About = () => {
+  const aboutRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.5 }
     );
-}
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div className="about-section" ref={aboutRef} style={{background:'skyblue'}}>
+      {/* Header Section */}
+      <div className={`about-header ${isVisible ? 'fade-in' : ''}`}>
+        <h1>Custom Runflat Solutions</h1>
+        <p>Each Runflat System is custom-made to match client specifications and requirements.</p>
+      </div>
+
+      {/* Features Section */}
+      <div className={`features ${isVisible ? 'slide-up' : ''}`}>
+        <div className="feature">
+          <FaShieldAlt className="feature-icon" />
+          <h2>Seamless Mobility</h2>
+          <p>Runflat tire systems ensure that drivers can keep moving safely even after a tire puncture...</p>
+        </div>
+        <div className="feature">
+          <FaCar className="feature-icon" />
+          <h2>Cost-Efficiency</h2>
+          <p>While Runflat Systems may have a higher upfront cost, they offer long-term cost savings...</p>
+        </div>
+        <div className="feature">
+          <FaCogs className="feature-icon" />
+          <h2>Exceptional Performance</h2>
+          <p>Our Runflat systems perform exceptionally well in challenging conditions, ensuring durability...</p>
+        </div>
+      </div>
+
+      {/* Why Choose Us Section */}
+      <div className={`why-choose-us ${isVisible ? 'zoom-in' : ''}`}>
+        <h2>Why Choose Runflat Tire Systems?</h2>
+        <div className="steps">
+          <div className="step">
+            <FaThumbsUp className="step-icon" />
+            <h3>Step: 01</h3>
+            <p>Seamless Mobility ensures that your journey is uninterrupted, even in challenging circumstances.</p>
+          </div>
+          <div className="step">
+            <FaUsers className="step-icon" />
+            <h3>Step: 02</h3>
+            <p>Cost-Efficiency allows for long-term savings by eliminating frequent tire changes and damage.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Signature Section */}
+      <div className="signature">
+        <img src={vivek_sign} alt="Vivek Japala" />
+        <p>Vivek Japala - Manager</p>
+      </div>
+    </div>
+  );
+};
 
 export default About;
