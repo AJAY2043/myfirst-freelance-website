@@ -3,7 +3,7 @@ import Navbar from '../../../Components/Navbar/Navbar';
 import Footer from '../../../Components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldAlt, faCogs, faDollarSign, faCheckCircle, faToolbox } from '@fortawesome/free-solid-svg-icons';
-import './RunFlatSystems.css';  // Make sure to create or update your CSS file to include the styles
+import './RunFlatSystems.css'; // Include this CSS file for animations and styles
 
 const RunFlatSystems = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -11,7 +11,7 @@ const RunFlatSystems = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 1000); // Simulate delayed loading for better UX
+    }, 1000); // Simulate loading delay for better UX
     return () => clearTimeout(timer);
   }, []);
 
@@ -20,42 +20,37 @@ const RunFlatSystems = () => {
       <Navbar />
       
       <div className="runflat-content">
-        <h1 className="section-title">RUNFLAT Systems</h1>
-        
-        <div className="features-container">
-          <div className="feature">
+        <h1 className="runflat-title animate-slide-in">Run-Flat Tire Systems</h1>
+        <p className="runflat-subtitle animate-fade-in">
+          Revolutionizing mobility for military and industrial vehicles.
+        </p>
+
+        <div className="runflat-features">
+          <div className="feature animate-zoom-in">
             <FontAwesomeIcon icon={faShieldAlt} className="feature-icon" />
-            <h3>Peace of Mind</h3>
-            <p>Our RUNFLAT Systems have been rigorously tested for performance, ensuring you're always safe on the road.</p>
+            <h3>Durability</h3>
+            <p>Engineered to withstand the harshest conditions.</p>
           </div>
-          
-          <div className="feature">
+          <div className="feature animate-zoom-in delay-1">
             <FontAwesomeIcon icon={faCogs} className="feature-icon" />
-            <h3>Material Superiority</h3>
-            <p>Years of innovation in ballistic composite technology ensure our RUNFLATS last longer and don't degrade over time.</p>
+            <h3>Advanced Technology</h3>
+            <p>Innovative designs ensure maximum performance.</p>
           </div>
-          
-          <div className="feature">
+          <div className="feature animate-zoom-in delay-2">
             <FontAwesomeIcon icon={faDollarSign} className="feature-icon" />
             <h3>Cost Efficiency</h3>
-            <p>Enjoy the best prices in the market without compromising on quality—more savings for you!</p>
+            <p>Minimized downtime and maintenance costs.</p>
           </div>
-          
-          <div className="feature">
+          <div className="feature animate-zoom-in delay-3">
             <FontAwesomeIcon icon={faCheckCircle} className="feature-icon" />
-            <h3>Easy Installation</h3>
-            <p>Our systems are easy to install without complex tools or prior training, getting you back on the road quickly.</p>
+            <h3>Reliability</h3>
+            <p>Proven performance in critical missions.</p>
           </div>
-          
-          <div className="feature">
+          <div className="feature animate-zoom-in delay-4">
             <FontAwesomeIcon icon={faToolbox} className="feature-icon" />
-            <h3>Versatility</h3>
-            <p>Our 2 or 3 segment systems are compatible with a wide range of vehicles, providing flexibility to meet your needs.</p>
+            <h3>Custom Solutions</h3>
+            <p>Tailored designs for diverse vehicle requirements.</p>
           </div>
-        </div>
-        
-        <div className="quote-section">
-          <button className="quote-button">Request A Quote</button>
         </div>
       </div>
 

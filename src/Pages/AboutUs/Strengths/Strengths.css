@@ -1,0 +1,68 @@
+.strengths-page {
+    background: linear-gradient(to bottom, #1a1a1a, #333);
+    color: white;
+    padding: 2rem 1rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.strengths-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.strengths-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.strengths-subtitle {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.strengths-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.strengths-card {
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    width: 300px;
+}
+
+.strengths-card:hover {
+    transform: scale(1.05);
+}
+
+.strengths-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00bcd4;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+}
+
+.animate-zoom-in {
+    animation: zoom-in 0.5s ease-in-out;
+}
+
+@keyframes zoom-in {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}

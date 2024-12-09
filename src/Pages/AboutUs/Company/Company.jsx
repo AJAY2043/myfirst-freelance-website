@@ -17,7 +17,7 @@ const Company = () => {
       <section className="hero-section animate-top">
         <div className="hero-text">
           <h1 className="hero-title">Welcome to Runflat Tire Systems</h1>
-          <p className="hero-description">Proud of its 200-year-old heritage, RunFlat International is known for producing top-tier tires. Our company has always embraced innovation and efficiency.</p>
+          <p className="hero-description">Proud of its 200-year-old heritage, Runflat Tire Systems is known for producing top-tier tires. Our company has always embraced innovation and efficiency.</p>
         </div>
       </section>
 
@@ -56,11 +56,11 @@ const Company = () => {
         <h2>Our Company</h2>
         <div className="products-container">
           <div className="product">
-            <img src={Company_img1} alt="Company Product 1" />
+            <img src={Company_img1} alt="Company Product 1" width='400'/>
             <p>High-quality, durable tires designed for all weather conditions.</p>
           </div>
           <div className="product">
-            <img src={Company_img2} alt="Company Product 2" />
+            <img src={Company_img2} alt="Company Product 2" width='400'/>
             <p>Efficient, eco-friendly tire solutions for urban mobility.</p>
           </div>
         </div>

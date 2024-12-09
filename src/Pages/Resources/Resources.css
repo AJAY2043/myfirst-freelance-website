@@ -1,0 +1,78 @@
+.resources-page {
+    font-family: 'Arial', sans-serif;
+    padding: 0px;
+    text-align: center;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+  }
+  
+  .resources-header {
+    margin-bottom: 30px;
+  }
+  
+  .resources-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .resources-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .resources-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .resource-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .resource-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffd700;
+  }
+  
+  .animate-slide-down {
+    animation: slideDown 1s ease-out;
+  }
+  
+  .animate-zoom-in {
+    animation: zoomIn 0.8s ease-in-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
