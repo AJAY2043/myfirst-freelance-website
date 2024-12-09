@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;   
+}
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff; /* White text */
+    padding: 30px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    
+  }
+  
+  /* Team Information Section */
+  .team-info {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient Background */
+    color: #f3f1f1; /* White text for visibility */
+    padding: 40px 0;
+     
+}
+  
+  .info-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .info-box:hover {
+    transform: translateY(-10px); /* Slight hover animation */
+  }
+  
+  .info-box h4 {
+    font-size: 1.6rem;
+    margin-top: 15px;
+  }
+  
+  .info-box p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .info-box {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .info-box h4 {
+      font-size: 1.3rem;
+    }
+  
+    .info-box p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Carousel Styles */
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .carousel-inner {
+    position: relative;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    filter: invert(1); /* Make carousel arrows white */
+  }
+  
+
+
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Container for Our Team */
+  .our-team-container {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .our-team-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Team Member Grid */
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Team Member Card */
+  .team-member-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+  }
+  
+  .team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Team Member Image */
+  .team-member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Member Name */
+  .team-member-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Member Role */
+  .team-member-role {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  /* Member Bio */
+  .team-member-bio {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  /* Contact Section */
+  .team-member-contact, .team-member-social {
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .team-member-icon {
+    color: #1e7e34;
+    margin-right: 10px;
+  }
+  
+  /* Mobile Responsive */
+  @media screen and (max-width: 768px) {
+    .team-members {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .team-members {
+      grid-template-columns: 1fr;
+    }
+  
+    .team-member-card {
+      padding: 15px;
+    }
+  
+    .team-member-name {
+      font-size: 1.5rem;
+    }
+  
+    .team-member-role {
+      font-size: 1rem;
+    }
+  
+    .team-member-bio {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(30px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
