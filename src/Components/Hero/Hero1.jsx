@@ -4,13 +4,13 @@ import './Hero1.css';
 
 const Hero1 = () => {
   return (
-    <div className="hero-container">
-      <div className="hero-image">
+    <div className="main-hero-container">
+      <div className="main-hero-image">
         <img src={hero_img1} alt="Hero" />
       </div>
-      <div className="hero-text">
-        <h1 className="text1" style={{color:'red'}}>WelCome To RunFlat Tiers Systems Website</h1>
-        <h2 className="text2" style={{color:'gold'}}>Experience Innovation and Excellence</h2>
+      <div className="main-hero-text">
+        <h1 className="main-text1" style={{color:'red'}}>WelCome To RunFlat Tiers Systems Website</h1>
+        <h2 className="main-text2" style={{color:'gold'}}>Experience Innovation and Excellence</h2>
       </div>
     </div>
   );
