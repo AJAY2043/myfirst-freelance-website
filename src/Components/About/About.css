@@ -1,82 +1,67 @@
 .about-section {
-    padding: 50px 20px;
-    text-align: center;
+  text-align: center;
+  padding: 100px 20px;
 }
-  
-  .about-header {
+
+.header h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.about-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-card h3 {
+  margin-top: 20px;
+  color: #007bff;
+}
+
+.signature img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.signature p {
+  font-size: 1.1em;
+  color: #333;
+  margin-top: 10px;
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
   }
-  
-  .about-header.fade-in {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
-  
-  .features {
-    display: flex;
-    justify-content: space-around;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  .features.slide-up {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .feature {
-    width: 30%;
-    text-align: center;
-  }
-  
-  .feature-icon {
-    font-size: 3rem;
-    color: #000;
-    margin-bottom: 10px;
-  }
-  
-  .why-choose-us {
-    margin-top: 40px;
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  .why-choose-us.zoom-in {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  .steps {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .step {
-    text-align: center;
-  }
-  
-  .step-icon {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .signature {
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  .signature img {
-    width: 150px;
-    border-radius: 50%;
-  }
-  
-  .signature p {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
+}
